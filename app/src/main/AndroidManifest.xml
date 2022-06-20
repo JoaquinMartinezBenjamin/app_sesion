@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sesion">
         <activity
+            android:name=".MaterialLista"
+            android:exported="true" />
+        <activity
             android:name=".usuario"
             android:exported="true" />
         <activity

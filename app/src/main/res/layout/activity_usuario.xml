@@ -27,10 +27,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="16dp" />
-
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
@@ -41,10 +37,6 @@
             android:id="@+id/id_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="18dp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -57,9 +49,55 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <Space
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="83dp" />
+            android:layout_height="289dp"
+            android:background="@color/white"
+            app:cardBackgroundColor="@color/purple_200">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/archivos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="ver_archivos"
+                    android:text="Ver archivos" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="showFileChooser"
+                    android:text="Seleccionar archivo para subir" />
+
+                <TextView
+                    android:id="@+id/ruta_archivo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="subir_archivo"
+                    android:text="subir archivo" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    app:srcCompat="@drawable/cifrado_archivos" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <Button
             android:id="@+id/button_salir"

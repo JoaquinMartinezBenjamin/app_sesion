@@ -4,17 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-
-import androidx.annotation.NonNull;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Sesion extends AppCompatActivity {
 
@@ -38,8 +37,13 @@ public class Sesion extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            reload();    // <------
+            Intent i = new Intent(getApplicationContext(),usuario.class);
+            startActivity(i);
+
         }
+        //if(currentUser != null){
+         //   reload();    // <------
+       // }
     }
 
 public void iniciar_sesion (View view) {
